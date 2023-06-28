@@ -2,13 +2,38 @@ STARTING_FLOOR = 12
 INPUT = [2,9,1,32]
 VELOCITY = 10
 
-def driver(STARTING_FLOOR, INPUT):
+def generate_inputs():
+  print("Starting Floor? (Defaults to 0 if invalid data is given)")
+  start = input()
+  print("Comma separated value of floors to travel to. Example: 2,9,1,32 - if given data is invalid will default to example")
+  floors = input()
+  start = validate_start(start):    
+  floors = validate_floors(floors):
+  driver(start, floors)
+
+def validate_start(start):
+  if not isinstance(int, start) or start < 0:
+    return 0
+
+def valid_floors(floors):
+  valid_input = "1234567890, "
+  for char in floors:
+    if char not in valid_input:
+      return [2,9,1,32]
+  floors = floors.replace(" ", "")
+  floors = floors.split(",")
+  res = [eval(i) for i in floors]
+  print("Modified list is: ", res)
+  return res
+
+
+def driver(start, floors):
   total_time = 0
-  current_floor = STARTING_FLOOR
+  current_floor = start
   for next_floor in INPUT:
     total_time += time_to_floor(current_floor, next_floor)
     current_floor = next_floor
-  output = [total_time] + [STARTING_FLOOR] + INPUT
+  output = [total_time] + [start] + floors
   return(output)
    
 def time_to_floor(origin, destination):
