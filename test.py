@@ -25,5 +25,8 @@ class ElevatorTest(unittest.TestCase):
   def test_given_example_returns_560(self):
     assert self.elevator.calculate_output(12, [2,9,1,32]) == [560,12,2,9,1,32], "given examples returns 560,12,2,9,1,32"
 
+  def test_calculate_output_returns_0(self):
+    assert self.elevator.calculate_output(0, [0,0,0]) == [0,0,0,0,0]
+
 if __name__ == '__main__':
   unittest.main()
