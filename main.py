@@ -20,7 +20,7 @@ class Elevator:
     
     def generate_inputs(self):
       start = int(input("Enter starting Floor : "))
-      floors = input("Comma separated value of floors to travel to. Example: 2,9,1,32 - if given data is invalid will default to example")
+      floors = input("Comma separated value of floors to travel to. Example: 2,9,1,32 - if given data is invalid will default to example: ")
       floors = self.validate_floors(floors)
       return start, floors
     
