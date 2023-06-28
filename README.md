@@ -12,5 +12,5 @@ Assumptions:
 Does not include negative floor numbers
 
 Features not included:
-Retry if given bad input instead of exitting the application
-Include negative floor numbers
+• Retry if given bad input instead of exitting the application
+• Include negative floor numbers
