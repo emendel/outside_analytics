@@ -11,4 +11,7 @@ Program Constants: Single floor travel time: 10
 Assumptions:
 Does not include negative floor numbers
 
-
+Features not included:
+Retry if given bad input instead of exitting the application
+Include negative floor numbers
+Optimize the floor choices to visit all the floors as quickly as possible
